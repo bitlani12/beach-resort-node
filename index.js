@@ -42,6 +42,9 @@ app.get("/ping", (req, res) => {
 });
 app.use('/users', require('./src/routes/users'))
 app.use('/bookroom', require('./src/routes/bookroom'))
+app.get("/", (req, res) => {
+  return res.send('hello server is working');
+});
 app.listen(PORT, () => {
   console.log("Server started listening on PORT : " + PORT);
 });
